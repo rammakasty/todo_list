@@ -11,7 +11,18 @@ const App = () => {
     const [todoInputTitle, setTodoInputTitle] = useState('');
     const [todoInputDesc, setTodoInputDesc] = useState('');
     const titleChangeHandler = (e) => setTodoInputTitle(e.target.value);
-    const descChangeHandler = (e) => setTodoInputTitle(e.target.value);
+    const descChangeHandler = (e) => setTodoInputDesc(e.target.value);
+
+    //button handler
+    const submitBtnHandler = () => {
+        const newObj = {
+            id: Date.now(),
+            title: todoInputTitle,
+            desc: todoInputDesc,
+            isDone: false,
+        };
+        setTodoTitle([...todoTitle, newObj]);
+    };
 
     return (
         <div>
@@ -21,6 +32,7 @@ const App = () => {
             <div>
                 <input value={todoInputDesc} onChange={descChangeHandler} />
             </div>
+            <button onClick={submitBtnHandler}>추가하기</button>
 
             <div className="todoBox__container">
                 {todoTitle.map((x) => {
@@ -28,6 +40,7 @@ const App = () => {
                         <div className="todoBox">
                             <h1>{x.title}</h1>
                             <h3>{x.desc}</h3>
+                            <button>삭제하기</button>
                         </div>
                     );
                 })}
