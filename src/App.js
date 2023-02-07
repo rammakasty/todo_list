@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const [todoInputTitle, setTodoInputTitle] = useState('안녕하세요');
+    const [todoInputDesc, setTodoInputDesc] = useState('');
+    const titleChangeHandler = (e) => {
+        setTodoInputTitle(e.target.value);
+    };
+
+    const descChangeHandler = (e) => {
+        setTodoInputTitle(e.target.value);
+    };
+
+    return (
+        <div>
+            <div>
+                <input value={todoInputTitle} onChange={titleChangeHandler} />
+            </div>
+            <div>
+                <input value={todoInputDesc} onChange={descChangeHandler} />
+            </div>
+            <button onClick="">추가하기</button>
+        </div>
+    );
+};
 
 export default App;
