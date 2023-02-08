@@ -1,17 +1,91 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-label {
+    margin-bottom: 10px;
+}
+
+input {
+    height: 30px;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    width: 100px;
+    margin-top: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .todoBox__container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .todoBox {
-    width: 300px;
-    height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border-radius: 1rem;
-    border: 1px solid #ff6969;
-    margin: 2rem;
+    width: 20%;
+    height: 200px;
+    margin: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+h1,
+h3 {
+    margin-top: 20px;
+}
+
+button {
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
