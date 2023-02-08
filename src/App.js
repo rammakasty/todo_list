@@ -40,7 +40,7 @@ const App = () => {
                 </div>
                 <div className="input-group">
                     <label className="form-label">제목</label>
-                    <input value={'todoInputTitle'} onChange={titleChangeHandler} />
+                    <input value={todoInputTitle} onChange={titleChangeHandler} />
                     <label className="form-label">내용</label>
                     <input value={todoInputDesc} onChange={descChangeHandler} />
                     <button onClick={submitBtnHandler}>추가</button>
